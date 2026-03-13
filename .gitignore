@@ -24,6 +24,9 @@ Thumbs.db
 dist/
 build/
 
+# SpecStory
+.specstory/
+
 # Temporary files
 *.tmp
 *.temp
