@@ -56,29 +56,6 @@ This application was created as a simple educational tool for children, featurin
     └── animals.ejs     # Animals learning page
 ```
 
-## Installation and Setup
-
-1. Clone the repository
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Start the application:
-   ```
-   npm start
-   ```
-4. Open your browser and navigate to:
-   ```
-   http://localhost:3000
-   ```
-
-## Development
-
-For development with automatic server restart:
-```
-npm run dev
-```
-
 ## Implementation Details
 
 ### Routes
@@ -155,6 +132,34 @@ The application was developed based on the following prompts:
 2. Open the integrated terminal (View > Terminal)
 3. Run `npm start` to start the server
 4. Use the "Debug" functionality to run with debugging enabled
+
+## Follow Steps to Get Started
+
+Follow these steps to get up and running quickly.
+
+### Prerequisites
+- Node.js (v18+)
+- npm
+- A modern web browser
+
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/CopilotLabs007/kids-learning-app.git
+cd kids-learning-app
+```
+
+### Step 2: Install Dependencies
+```bash
+npm install
+```
+
+### Step 3: Run the App
+```bash
+npm start
+```
+Open your browser at **http://localhost:3000**
+
+---
 
 ## Future Enhancements
 
