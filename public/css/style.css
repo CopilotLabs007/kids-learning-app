@@ -1,0 +1,495 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #4ECDC4;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF6B6B;
+}
+
+/* Main Content Styles */
+main {
+    padding: 40px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: #FF6B6B;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Home Page Styles */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #FFE66D;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section h2 {
+    font-size: 2.5rem;
+    color: #FF6B6B;
+    margin-bottom: 15px;
+}
+
+.welcome-section p {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.category-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    color: #4ECDC4;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #FF6B6B;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FF8E8E;
+}
+
+/* Alphabet Page Styles */
+.alphabet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.letter-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.letter-card:hover {
+    transform: scale(1.05);
+    background-color: #FFE66D;
+}
+
+.letter {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FF6B6B;
+    margin-bottom: 5px;
+}
+
+.example {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Numbers Page Styles */
+.numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.number-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.number-card:hover {
+    transform: scale(1.05);
+    background-color: #C7F9CC;
+}
+
+.number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4ECDC4;
+    margin-bottom: 5px;
+}
+
+.number-word {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Colors Page Styles */
+.colors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.color-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.color-card:hover {
+    transform: scale(1.05);
+}
+
+.color-box {
+    height: 100px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.color-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Shapes Page Styles */
+.shapes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.shape-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.shape-card:hover {
+    transform: scale(1.05);
+    background-color: #FFE66D;
+}
+
+.shape {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto 10px;
+}
+
+.circle {
+    background-color: #FF6B6B;
+    border-radius: 50%;
+}
+
+.square {
+    background-color: #4ECDC4;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #FFE66D;
+    background-color: transparent;
+}
+
+.rectangle {
+    background-color: #FF8E8E;
+    width: 120px;
+    height: 80px;
+}
+
+.oval {
+    background-color: #C7F9CC;
+    border-radius: 50%;
+    width: 120px;
+    height: 80px;
+}
+
+.diamond {
+    background-color: #FF9F1C;
+    transform: rotate(45deg);
+}
+
+.star {
+    position: relative;
+    background-color: transparent;
+}
+
+.star:before {
+    content: "★";
+    position: absolute;
+    font-size: 100px;
+    line-height: 100px;
+    color: #FFBF69;
+    top: 0;
+    left: 0;
+}
+
+.heart {
+    position: relative;
+    background-color: transparent;
+}
+
+.heart:before {
+    content: "♥";
+    position: absolute;
+    font-size: 100px;
+    line-height: 100px;
+    color: #FF6B6B;
+    top: 0;
+    left: 0;
+}
+
+.shape-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Animals Page Styles */
+.animals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.animal-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.animal-card:hover {
+    transform: scale(1.05);
+    background-color: #C7F9CC;
+}
+
+.animal-image {
+    height: 120px;
+    margin-bottom: 10px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Animal Images */
+#lion {
+    background-image: url('https://images.unsplash.com/photo-1546182990-dffeafbe841d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#elephant {
+    background-image: url('https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#giraffe {
+    background-image: url('https://images.unsplash.com/photo-1547721064-da6cfb341d50?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#monkey {
+    background-image: url('https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#zebra {
+    background-image: url('https://images.unsplash.com/photo-1501706362039-c06b2d715385?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#penguin {
+    background-image: url('https://images.unsplash.com/photo-1551986782-d0169b3f8fa7?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#cat {
+    background-image: url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#dog {
+    background-image: url('https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#cow {
+    background-image: url('https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#sheep {
+    background-image: url('https://images.unsplash.com/photo-1484557985045-edf25e08da73?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#horse {
+    background-image: url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#duck {
+    background-image: url('https://images.unsplash.com/photo-1555852095-64e7428df0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+.animal-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4ECDC4;
+    margin-bottom: 5px;
+}
+
+.animal-sound {
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Learning Tips Styles */
+.learning-tips {
+    background-color: #FFE66D;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.learning-tips h3 {
+    font-size: 1.5rem;
+    color: #FF6B6B;
+    margin-bottom: 15px;
+}
+
+.learning-tips ul {
+    list-style-position: inside;
+    margin-left: 20px;
+}
+
+.learning-tips li {
+    margin-bottom: 8px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4ECDC4;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    .welcome-section h2 {
+        font-size: 2rem;
+    }
+    
+    .welcome-section p {
+        font-size: 1.1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+}
