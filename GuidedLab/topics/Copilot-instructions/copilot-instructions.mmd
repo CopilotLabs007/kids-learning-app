@@ -1,0 +1,12 @@
+flowchart TD
+    A["Developer Context<br/>(What you want to do)"] --> B["Custom Instructions<br/>(Your permanent tweaks)"]
+    B --> C["AI Processing<br/>(Base knowledge + your preferences)"]
+    C --> D["Tailored Output<br/>(Ready to use)"]
+
+    subgraph B_details ["Custom Instructions Details"]
+        B1["Preferred libraries"]
+        B2["Code style (PEP8, etc.)"]
+        B3["Output format"]
+    end
+
+    B --> B_details

@@ -1,5 +1,5 @@
 ---
-name: Developer
+name: 2.Developer
 description: "Implements features based on plans from TeamLead agent. Coordinates implementation with default agent, then hands off to Tester for validation."
 argument-hint: Reference the plan to implement (usually handed off from TeamLead)
 target: vscode

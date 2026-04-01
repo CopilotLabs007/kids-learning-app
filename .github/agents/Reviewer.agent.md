@@ -1,5 +1,5 @@
 ---
-name: Reviewer
+name: 4.Reviewer
 description: "Reviews code quality, security, and best practices. Final check before feature completion. Provides feedback and approves or requests changes."
 argument-hint: What to review (usually handed off from Tester or Developer)
 target: vscode

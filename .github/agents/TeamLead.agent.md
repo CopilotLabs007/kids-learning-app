@@ -1,5 +1,5 @@
 ---
-name: TeamLead
+name: 1.TeamLead
 description: "Creates detailed implementation plans for new features in kids-learning-app. Analyzes requirements, researches codebase patterns, designs architecture, and hands off to Developer agent for implementation."
 argument-hint: Describe the feature to plan (e.g., "new game feature" or "user progress tracking")
 target: vscode

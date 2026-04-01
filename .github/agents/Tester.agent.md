@@ -1,5 +1,5 @@
 ---
-name: Tester
+name: 3.Tester
 description: "Plans and coordinates test creation for implemented features. Hands off to default agent for test execution, then to Reviewer for quality check."
 argument-hint: Specify what to test (usually handed off from Developer)
 target: vscode
