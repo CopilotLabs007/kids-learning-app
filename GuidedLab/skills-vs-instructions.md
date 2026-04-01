@@ -20,6 +20,8 @@ Agent Skills define what the agent can do. Copilot Instructions define how the a
 ### Smart Cleaning Robot Analogy
 Think of a smart cleaning robot.
 
+![Smart Cleaning Robot](octocat-robot.png)
+
 - The robot's built-in and add-on capabilities (vacuuming, mopping, object detection) are like Agent Skills.
 - The user-defined rules (no-go zones, cleaning schedule, carpet restrictions) are like Copilot Instructions.
 
