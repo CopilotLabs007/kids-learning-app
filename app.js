@@ -39,6 +39,10 @@ app.get('/animals', (req, res) => {
   res.render('animals', { title: 'Learn Animals' });
 });
 
+app.get('/trees', (req, res) => {
+  res.render('trees', { title: 'Learn Trees' });
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
