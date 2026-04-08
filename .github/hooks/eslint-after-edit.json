@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "type": "command",
+        "command": "node .github/hooks/run-eslint-after-edit.js",
+        "timeout": 30
+      }
+    ]
+  }
+}
