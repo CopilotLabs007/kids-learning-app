@@ -435,6 +435,99 @@ main {
     font-style: italic;
 }
 
+/* Trees Page Styles */
+.trees-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.tree-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tree-card:hover {
+    transform: scale(1.05);
+    background-color: #C7F9CC;
+}
+
+.tree-image {
+    height: 120px;
+    margin-bottom: 10px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Tree Images */
+#oak {
+    background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#pine {
+    background-image: url('https://images.unsplash.com/photo-1519331379826-f10be5486c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#maple {
+    background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#palm {
+    background-image: url('https://images.unsplash.com/photo-1537808288253-200047a98c1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#cherry {
+    background-image: url('https://images.unsplash.com/photo-1522383225653-ed111181a951?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#willow {
+    background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#bamboo {
+    background-image: url('https://images.unsplash.com/photo-1545041255-4e6f5f8cc04a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#birch {
+    background-image: url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#redwood {
+    background-image: url('https://images.unsplash.com/photo-1511497584788-876760111969?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#eucalyptus {
+    background-image: url('https://images.unsplash.com/photo-1574263867128-a3d5c1b1deae?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#banyan {
+    background-image: url('https://images.unsplash.com/photo-1533167649158-6d508895b680?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+#apple-tree {
+    background-image: url('https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+.tree-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4ECDC4;
+    margin-bottom: 5px;
+}
+
+.tree-type {
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+}
+
 /* Learning Tips Styles */
 .learning-tips {
     background-color: #FFE66D;
