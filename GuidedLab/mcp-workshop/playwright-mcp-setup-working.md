@@ -86,7 +86,7 @@ If not visible, reload the VS Code window and check for errors in the output pan
 ---
 ## 5. Repository Settings Used In This Workshop
 
-
+![alt text](/GuidedLab/mcp-workshop/images/vscode-mcp-json.png)
 ### MCP config
 
 The current MCP environment variable in `.vscode/mcp.json` is:
@@ -255,14 +255,14 @@ Use this order for a smooth hands-on session:
 
 1. Confirm the app is running and MCP tools are available.
 2. Run two smoke prompts to validate navigation.
-3. Demonstrate click and modal workflows.
-4. Demonstrate form fill and note entry.
-5. Demonstrate selection and dynamic content.
-6. Demonstrate hover and resize.
-7. Demonstrate file upload and note removal.
-8. Demonstrate drag and drop.
-9. Demonstrate screenshot and accessibility snapshot.
-10. Demonstrate browser history.
+3. Try click and modal workflows.
+4. Try form fill and note entry.
+5. Try selection and dynamic content.
+6. Try hover and resize.
+7. Try file upload and note removal.
+8. Try drag and drop.
+9. Try screenshot and accessibility snapshot.
+10. Try browser history.
 11. Finish with the quiz flow.
 
 This progression builds confidence before moving into richer interactions.
@@ -380,6 +380,10 @@ Optional focused prompt for submit behavior:
 
 ```text
 Open /playground, fill the Profile Builder with learner name Mia, age group 6-7, favorite lesson Alphabet, story mode enabled, and energy level 8. Click Save Profile and confirm that the submitted profile summary appears in the result area.
+```
+
+```text
+Open /playground and use browser_click on [data-testid='profile-submit'].
 ```
 
 #### 6. Fill the learner profile with one command
