@@ -23,7 +23,7 @@ This will open a browser window where you can log in to your GitHub account and 
 Copilot CLI extension.
 
 ```bash
-copilot tell me about the lyout of this project
+copilot tell me about the layout of this project
 ```
 - /update
 - what process is using port 8080

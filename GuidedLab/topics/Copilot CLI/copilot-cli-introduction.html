@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Copilot CLI: In Short</title>
+  <style>
+    :root {
+      --bg: #f4fbff;
+      --surface: rgba(255, 255, 255, 0.82);
+      --surface-strong: #ffffff;
+      --text: #132238;
+      --muted: #50637a;
+      --blue: #0f6cbd;
+      --teal: #0f9f92;
+      --green: #15803d;
+      --gold: #d97706;
+      --rose: #db2777;
+      --line: rgba(15, 108, 189, 0.14);
+      --shadow: 0 22px 60px rgba(15, 35, 60, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Avenir Next, Trebuchet MS, Helvetica Neue, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(14, 165, 233, 0.22), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(20, 184, 166, 0.18), transparent 18%),
+        linear-gradient(180deg, #f8fdff 0%, #eef8ff 100%);
+      line-height: 1.6;
+    }
+
+    .page {
+      width: min(1120px, calc(100vw - 32px));
+      margin: 32px auto 56px;
+    }
+
+    .hero,
+    .section,
+    .summary {
+      background: var(--surface);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      overflow: hidden;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: linear-gradient(135deg, #0ea5e9, #14b8a6);
+    }
+
+    .hero-content {
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1.35fr 0.95fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 3vw, 3rem);
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: clamp(1.45rem, 2vw, 2rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .lead {
+      margin-top: 12px;
+      font-size: 1.06rem;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .callout-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .callout {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(15, 108, 189, 0.08), rgba(15, 159, 146, 0.08));
+      border: 1px solid var(--line);
+    }
+
+    .callout strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.98rem;
+    }
+
+    .sections {
+      display: grid;
+      gap: 20px;
+      margin-top: 22px;
+    }
+
+    .section {
+      padding: 26px;
+    }
+
+    .bullet-grid,
+    .card-grid,
+    .rule-grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .bullet-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .bullet-card,
+    .mini-card,
+    .rule-card {
+      padding: 18px;
+      border-radius: var(--radius-lg);
+      background: var(--surface-strong);
+      border: 1px solid rgba(15, 108, 189, 0.1);
+    }
+
+    .bullet-card {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      font-size: 1.2rem;
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.14), rgba(20, 184, 166, 0.14));
+    }
+
+    .bullet-card h3,
+    .mini-card h3,
+    .rule-card h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .compare-image {
+      margin-top: 16px;
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid rgba(15, 108, 189, 0.12);
+      background: #ffffff;
+    }
+
+    .compare-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .diagram-note {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(219, 234, 254, 0.7), rgba(220, 252, 231, 0.7));
+      border: 1px solid rgba(15, 108, 189, 0.12);
+      color: var(--muted);
+    }
+
+    .compare-grid,
+    .card-grid,
+    .rule-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .compare-grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .mini-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mini-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 6px;
+    }
+
+    .mini-card.editor::before {
+      background: linear-gradient(90deg, var(--blue), #38bdf8);
+    }
+
+    .mini-card.cli::before {
+      background: linear-gradient(90deg, var(--green), var(--teal));
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .summary {
+      margin-top: 22px;
+      padding: 24px 26px;
+      background: linear-gradient(135deg, rgba(15, 108, 189, 0.1), rgba(20, 184, 166, 0.12));
+      border: 1px solid rgba(15, 108, 189, 0.14);
+    }
+
+    .summary p {
+      font-size: 1.08rem;
+    }
+
+    .accent-blue {
+      color: var(--blue);
+    }
+
+    .accent-green {
+      color: var(--green);
+    }
+
+    .accent-gold {
+      color: var(--gold);
+    }
+
+    .accent-rose {
+      color: var(--rose);
+    }
+
+    @media (max-width: 860px) {
+      .hero-content,
+      .bullet-grid,
+      .compare-grid,
+      .card-grid,
+      .rule-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page {
+        width: min(100vw - 20px, 1120px);
+        margin: 10px auto 28px;
+      }
+
+      .hero-content,
+      .section,
+      .summary {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <img src="assets/copilot-cli-banner.svg" alt="GitHub Copilot CLI banner">
+      <div class="hero-content">
+        <div>
+          <h1>GitHub Copilot CLI: In Short</h1>
+          <p class="lead">GitHub Copilot CLI brings Copilot into the terminal. Use it when the task is more than just editing code.</p>
+        </div>
+        <div class="callout-grid">
+          <div class="callout">
+            <strong>Editor view</strong>
+            <p class="muted">Copilot with VSCode is best when you are reading, writing, and editing code in files.</p>
+          </div>
+          <div class="callout">
+            <strong>Workflow view</strong>
+            <p class="muted">Copilot CLI is best when the task includes terminal commands, Git steps, planning, automation, or end-to-end execution.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="sections">
+      <section class="section">
+        <h2><span class="accent-blue">✨ What It Is</span></h2>
+        <div class="bullet-grid">
+          <article class="bullet-card">
+            <div class="icon">🔎</div>
+            <div>
+              <h3>Explore</h3>
+              <p class="muted">Understand a repository quickly from the terminal.</p>
+            </div>
+          </article>
+          <article class="bullet-card">
+            <div class="icon">🧪</div>
+            <div>
+              <h3>Run</h3>
+              <p class="muted">Use shell commands, inspect output, and work through fixes.</p>
+            </div>
+          </article>
+          <article class="bullet-card">
+            <div class="icon">🌿</div>
+            <div>
+              <h3>Work with Git</h3>
+              <p class="muted">Handle commits, branches, diffs, and related repo tasks.</p>
+            </div>
+          </article>
+          <article class="bullet-card">
+            <div class="icon">🧭</div>
+            <div>
+              <h3>Handle full tasks</h3>
+              <p class="muted">Go from one prompt to a planned, multi-step workflow.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2><span class="accent-gold">🆚 Why Not Only VS Code?</span></h2>
+        <p class="muted">Copilot with VSCode is excellent for code-focused work, but many developer tasks start outside the editor.</p>
+        <div class="compare-grid">
+          <article class="mini-card editor">
+            <h3>Copilot with VSCode</h3>
+            <ul>
+              <li>Inline code generation</li>
+              <li>Explaining code in files</li>
+              <li>Refactoring while viewing source</li>
+              <li>Debugging with visual context</li>
+            </ul>
+          </article>
+          <article class="mini-card cli">
+            <h3>GitHub Copilot CLI</h3>
+            <ul>
+              <li>Repository understanding from the terminal</li>
+              <li>Git and command-line workflows</li>
+              <li>Logs, tests, and command output</li>
+              <li>Issue, PR, and workflow-driven tasks</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2><span class="accent-green">🎨 Core Difference</span></h2>
+        <p class="muted">Think of it as a simple choice based on where the work is happening.</p>
+        <div class="compare-image">
+          <img src="assets/copilot-cli-compare.svg" alt="Comparison between Copilot with VSCode and GitHub Copilot CLI">
+        </div>
+        <div class="diagram-note">
+          <strong>Think of it as a simple choice:</strong> if the work is mainly inside files, use Copilot with VSCode. If the work includes terminal commands, Git steps, planning, or a broader workflow, use Copilot CLI.
+        </div>
+        <div class="rule-grid">
+          <article class="rule-card">
+            <h3>Use Copilot with VSCode</h3>
+            <p class="muted">When the work is centered on files and code changes in the editor.</p>
+          </article>
+          <article class="rule-card">
+            <h3>Use Copilot CLI</h3>
+            <p class="muted">When the work includes terminal steps, Git steps, or a broader workflow around the code.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2><span class="accent-rose">🎯 What Challenges Copilot CLI Solves</span></h2>
+        <div class="card-grid">
+          <article class="mini-card">
+            <h3>Less context switching</h3>
+            <p class="muted">It reduces back-and-forth between terminal, GitHub, and the editor.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Mixed workflows</h3>
+            <p class="muted">It handles tasks that mix code, commands, and Git in one flow.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Faster onboarding</h3>
+            <p class="muted">It helps new contributors understand a repository more quickly.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Longer sessions</h3>
+            <p class="muted">It supports ongoing work better than one-off prompts.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2><span class="accent-blue">🌈 Additional Advantages</span></h2>
+        <div class="card-grid">
+          <article class="mini-card">
+            <h3>Terminal-friendly</h3>
+            <p class="muted">It fits naturally into terminal and Git-heavy workflows.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Plan first</h3>
+            <p class="muted">Plan mode lets you think before making changes.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Resume later</h3>
+            <p class="muted">Session memory helps you continue longer tasks without losing context.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Connect more tools</h3>
+            <p class="muted">MCP support connects Copilot CLI to systems such as GitHub.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section class="summary">
+      <h2>🧠 Simple Rule of Thumb</h2>
+      <p><strong>Use Copilot with VSCode</strong> when you are mainly editing code. <strong>Use Copilot CLI</strong> when the task includes terminal commands, Git workflows, planning, or full task execution.</p>
+      <p style="margin-top: 12px;"><strong>🎤 One-line summary:</strong> Copilot with VSCode helps you write code faster. Copilot CLI helps you move faster across the full developer workflow.</p>
+    </section>
+  </main>
+</body>
+</html>

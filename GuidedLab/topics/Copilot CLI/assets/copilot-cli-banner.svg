@@ -1,0 +1,39 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="420" rx="28" fill="url(#bg)"/>
+  <circle cx="1070" cy="84" r="110" fill="#FFFFFF" fill-opacity="0.12"/>
+  <circle cx="1120" cy="320" r="150" fill="#FFFFFF" fill-opacity="0.08"/>
+  <rect x="58" y="58" width="476" height="304" rx="22" fill="#111827"/>
+  <rect x="82" y="92" width="428" height="26" rx="13" fill="#1F2937"/>
+  <circle cx="104" cy="105" r="6" fill="#F87171"/>
+  <circle cx="124" cy="105" r="6" fill="#FBBF24"/>
+  <circle cx="144" cy="105" r="6" fill="#34D399"/>
+  <text x="84" y="160" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">GitHub Copilot CLI</text>
+  <text x="84" y="204" fill="#93C5FD" font-family="Arial, Helvetica, sans-serif" font-size="22">Plan</text>
+  <text x="162" y="204" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="22">-</text>
+  <text x="182" y="204" fill="#86EFAC" font-family="Arial, Helvetica, sans-serif" font-size="22">Run</text>
+  <text x="246" y="204" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="22">-</text>
+  <text x="266" y="204" fill="#FDE68A" font-family="Arial, Helvetica, sans-serif" font-size="22">Review</text>
+  <text x="352" y="204" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="22">-</text>
+  <text x="372" y="204" fill="#F9A8D4" font-family="Arial, Helvetica, sans-serif" font-size="22">Ship</text>
+  <text x="84" y="252" fill="#D1D5DB" font-family="Arial, Helvetica, sans-serif" font-size="18">Terminal-native Copilot for code, Git, commands,</text>
+  <text x="84" y="280" fill="#D1D5DB" font-family="Arial, Helvetica, sans-serif" font-size="18">planning, automation, and end-to-end workflow tasks.</text>
+  <rect x="666" y="72" width="462" height="120" rx="24" fill="#FFFFFF" fill-opacity="0.95"/>
+  <rect x="666" y="228" width="462" height="120" rx="24" fill="#0F172A" fill-opacity="0.92"/>
+  <text x="696" y="118" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Copilot with VSCode</text>
+  <text x="696" y="150" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="17">
+    <tspan x="696" dy="0">Best for editing, refactoring,</tspan>
+    <tspan x="696" dy="24">and debugging code</tspan>
+  </text>
+  <text x="696" y="274" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Copilot CLI</text>
+  <text x="696" y="304" fill="#BFDBFE" font-family="Arial, Helvetica, sans-serif" font-size="17">
+    <tspan x="696" dy="0">Best for commands, Git, planning,</tspan>
+    <tspan x="696" dy="24">automation, and workflow tasks</tspan>
+  </text>
+  <defs>
+    <linearGradient id="bg" x1="68" y1="44" x2="1132" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0EA5E9"/>
+      <stop offset="0.5" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+  </defs>
+</svg>
