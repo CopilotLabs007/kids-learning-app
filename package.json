@@ -7,7 +7,10 @@
     "dev": "nodemon app.js",
     "lint": "eslint app.js public/js .github/hooks",
     "lint:fix": "eslint app.js public/js .github/hooks --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:playground": "playwright test tests/playground.spec.ts",
+    "test:quiz": "playwright test tests/quiz.spec.ts"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +22,7 @@
     "express-ejs-layouts": "^2.5.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.53.0",
     "eslint": "^10.2.0",
     "nodemon": "^3.1.10"
   }

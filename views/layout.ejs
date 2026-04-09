@@ -6,11 +6,22 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body data-page="<%= page %>" data-theme="sunny">
     <header>
         <div class="container">
-            <h1>Kids Learning World</h1>
-            <nav>
+            <div class="header-top">
+                <h1>Kids Learning World</h1>
+                <button
+                    type="button"
+                    class="theme-toggle"
+                    id="theme-toggle"
+                    data-testid="theme-toggle"
+                    aria-pressed="false"
+                >
+                    Switch to Sky Theme
+                </button>
+            </div>
+            <nav aria-label="Primary navigation">
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/alphabet">Alphabet</a></li>
@@ -18,6 +29,8 @@
                     <li><a href="/colors">Colors</a></li>
                     <li><a href="/shapes">Shapes</a></li>
                     <li><a href="/animals">Animals</a></li>
+                    <li><a href="/playground">Playground</a></li>
+                    <li><a href="/quiz">Quiz</a></li>
                 </ul>
             </nav>
         </div>

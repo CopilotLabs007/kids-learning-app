@@ -27,6 +27,9 @@ module.exports = [
       sourceType: 'script',
       globals: {
         document: 'readonly',
+        fetch: 'readonly',
+        HTMLElement: 'readonly',
+        localStorage: 'readonly',
         setTimeout: 'readonly',
         SpeechSynthesisUtterance: 'readonly',
         window: 'readonly'

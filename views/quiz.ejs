@@ -1,0 +1,44 @@
+<section class="section-header">
+    <p class="eyebrow">End-to-end challenge</p>
+    <h2>Quiz Challenge</h2>
+    <p>Start the quiz, answer one question at a time, and verify the score, progress bar, and review summary.</p>
+</section>
+
+<section class="quiz-shell" data-testid="quiz-shell">
+    <div class="quiz-intro" id="quiz-intro" data-testid="quiz-intro">
+        <h3>Ready for five quick questions?</h3>
+        <p>This flow is built for Playwright: single-choice answers, disabled states, progress updates, and result review.</p>
+        <button type="button" class="btn" id="start-quiz" data-testid="start-quiz">Start Quiz</button>
+    </div>
+
+    <div class="quiz-stage" id="quiz-stage" hidden data-testid="quiz-stage">
+        <div class="quiz-progress-row">
+            <p id="quiz-progress-text" data-testid="quiz-progress-text">Question 1 of <%= quizQuestions.length %></p>
+            <div class="quiz-progress-track" aria-hidden="true">
+                <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="quiz-card">
+            <h3 id="quiz-question" data-testid="quiz-question"></h3>
+            <form id="quiz-form" class="quiz-options" aria-label="Quiz answers"></form>
+            <div class="button-row">
+                <button type="button" class="secondary-btn" id="previous-question" data-testid="previous-question">Previous</button>
+                <button type="button" class="btn" id="next-question" data-testid="next-question" disabled>Next</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="quiz-results" id="quiz-results" hidden data-testid="quiz-results">
+        <p class="eyebrow">Results</p>
+        <h3 id="quiz-score" data-testid="quiz-score"></h3>
+        <p id="quiz-message" data-testid="quiz-message"></p>
+        <button type="button" class="btn" id="retry-quiz" data-testid="retry-quiz">Try Again</button>
+        <div class="review-card">
+            <h4>Answer Review</h4>
+            <ol id="quiz-review" data-testid="quiz-review"></ol>
+        </div>
+    </div>
+</section>
+
+<script id="quiz-data" type="application/json"><%- JSON.stringify(quizQuestions) %></script>

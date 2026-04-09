@@ -1,36 +1,97 @@
-<div class="welcome-section">
-    <h2>Welcome to Kids Learning World!</h2>
-    <p>A fun and interactive way for children to learn and explore basic concepts.</p>
+<section class="welcome-section hero-panel">
+    <div>
+        <p class="eyebrow">Play, click, type, drag, and verify</p>
+        <h2>Welcome to Kids Learning World!</h2>
+        <p>A fun and interactive way for children to learn and explore basic concepts.</p>
+    </div>
+    <div class="hero-stats" data-testid="home-progress-panel">
+        <div class="hero-stat">
+            <span class="hero-stat-label">Visited pages</span>
+            <strong class="hero-stat-value" id="visited-count" data-testid="visited-count">0</strong>
+        </div>
+        <div class="hero-stat">
+            <span class="hero-stat-label">Favorite topics</span>
+            <strong class="hero-stat-value" id="favorite-count" data-testid="favorite-count">0</strong>
+        </div>
+    </div>
+</section>
+
+<section class="toolbar-card" aria-label="Topic search and filters">
+    <label class="field-label" for="topic-search">Find a topic</label>
+    <input
+        id="topic-search"
+        class="text-input"
+        type="search"
+        placeholder="Search topics like quiz, colors, or playground"
+        data-testid="topic-search"
+    >
+</section>
+
+<div class="category-cards" id="topic-cards">
+    <div class="card" data-topic-card data-topic-name="alphabet" data-topic-keywords="letters phonics words">
+        <h3>Alphabet</h3>
+        <p>Learn letters A to Z with fun examples.</p>
+        <div class="card-actions">
+            <a href="/alphabet" class="btn">Start Learning</a>
+            <button type="button" class="favorite-btn" data-favorite-topic="alphabet" data-testid="favorite-alphabet">Save Topic</button>
+        </div>
+    </div>
+
+    <div class="card" data-topic-card data-topic-name="numbers" data-topic-keywords="count math one two three">
+        <h3>Numbers</h3>
+        <p>Count and learn numbers from 1 to 20.</p>
+        <div class="card-actions">
+            <a href="/numbers" class="btn">Start Learning</a>
+            <button type="button" class="favorite-btn" data-favorite-topic="numbers" data-testid="favorite-numbers">Save Topic</button>
+        </div>
+    </div>
+
+    <div class="card" data-topic-card data-topic-name="colors" data-topic-keywords="paint rainbow red blue green">
+        <h3>Colors</h3>
+        <p>Discover the beautiful world of colors.</p>
+        <div class="card-actions">
+            <a href="/colors" class="btn">Start Learning</a>
+            <button type="button" class="favorite-btn" data-favorite-topic="colors" data-testid="favorite-colors">Save Topic</button>
+        </div>
+    </div>
+
+    <div class="card" data-topic-card data-topic-name="shapes" data-topic-keywords="circle square triangle geometry">
+        <h3>Shapes</h3>
+        <p>Learn about different shapes around us.</p>
+        <div class="card-actions">
+            <a href="/shapes" class="btn">Start Learning</a>
+            <button type="button" class="favorite-btn" data-favorite-topic="shapes" data-testid="favorite-shapes">Save Topic</button>
+        </div>
+    </div>
+
+    <div class="card" data-topic-card data-topic-name="animals" data-topic-keywords="zoo sounds habitats wild farm">
+        <h3>Animals</h3>
+        <p>Meet and learn about different animals.</p>
+        <div class="card-actions">
+            <a href="/animals" class="btn">Start Learning</a>
+            <button type="button" class="favorite-btn" data-favorite-topic="animals" data-testid="favorite-animals">Save Topic</button>
+        </div>
+    </div>
+
+    <div class="card feature-card" data-topic-card data-topic-name="playground" data-topic-keywords="form upload modal tabs drag drop api testing">
+        <span class="pill">Testing Lab</span>
+        <h3>Playwright Playground</h3>
+        <p>Practice automating forms, dialogs, tabs, uploads, drag and drop, and live API updates.</p>
+        <div class="card-actions">
+            <a href="/playground" class="btn">Open Playground</a>
+            <button type="button" class="favorite-btn" data-favorite-topic="playground" data-testid="favorite-playground">Save Topic</button>
+        </div>
+    </div>
+
+    <div class="card feature-card" data-topic-card data-topic-name="quiz" data-topic-keywords="questions answers score progress retry">
+        <span class="pill">Challenge Mode</span>
+        <h3>Quiz Challenge</h3>
+        <p>Answer questions, track score, and verify progress and results across the full flow.</p>
+        <div class="card-actions">
+            <a href="/quiz" class="btn">Take Quiz</a>
+            <button type="button" class="favorite-btn" data-favorite-topic="quiz" data-testid="favorite-quiz">Save Topic</button>
+        </div>
+    </div>
 </div>
 
-<div class="category-cards">
-    <div class="card">
-        <h3>Alphabet</h3>
-        <p>Learn letters A to Z with fun examples</p>
-        <a href="/alphabet" class="btn">Start Learning</a>
-    </div>
-    
-    <div class="card">
-        <h3>Numbers</h3>
-        <p>Count and learn numbers from 1 to 20</p>
-        <a href="/numbers" class="btn">Start Learning</a>
-    </div>
-    
-    <div class="card">
-        <h3>Colors</h3>
-        <p>Discover the beautiful world of colors</p>
-        <a href="/colors" class="btn">Start Learning</a>
-    </div>
-    
-    <div class="card">
-        <h3>Shapes</h3>
-        <p>Learn about different shapes around us</p>
-        <a href="/shapes" class="btn">Start Learning</a>
-    </div>
-    
-    <div class="card">
-        <h3>Animals</h3>
-        <p>Meet and learn about different animals</p>
-        <a href="/animals" class="btn">Start Learning</a>
-    </div>
-</div>
+<p class="empty-state" id="topic-empty-state" hidden>No topics match that search yet.</p>

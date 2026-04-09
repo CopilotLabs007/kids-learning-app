@@ -1,0 +1,150 @@
+<section class="section-header">
+    <p class="eyebrow">Playwright practice zone</p>
+    <h2>Testing Playground</h2>
+    <p>Use this page to automate forms, local storage, dialogs, drag and drop, uploads, tabs, and API requests.</p>
+</section>
+
+<div class="playground-layout">
+    <section class="play-card" data-testid="profile-card">
+        <div class="section-title-row">
+            <h3>Profile Builder</h3>
+            <span class="pill">Form + Validation</span>
+        </div>
+        <form id="profile-form" class="stack-md" novalidate>
+            <label class="field-label" for="learner-name">Learner name</label>
+            <input id="learner-name" class="text-input" name="learnerName" type="text" minlength="2" maxlength="20" required data-testid="learner-name">
+
+            <label class="field-label" for="learner-age">Age group</label>
+            <select id="learner-age" class="select-input" name="learnerAge" required data-testid="learner-age">
+                <option value="">Choose one</option>
+                <option value="4-5">4-5</option>
+                <option value="6-7">6-7</option>
+                <option value="8-9">8-9</option>
+            </select>
+
+            <fieldset class="choice-group">
+                <legend class="field-label">Favorite lesson</legend>
+                <label><input type="radio" name="favoriteLesson" value="Alphabet" data-testid="lesson-alphabet"> Alphabet</label>
+                <label><input type="radio" name="favoriteLesson" value="Numbers"> Numbers</label>
+                <label><input type="radio" name="favoriteLesson" value="Animals"> Animals</label>
+            </fieldset>
+
+            <label class="checkbox-row" for="story-mode">
+                <input id="story-mode" type="checkbox" name="storyMode" data-testid="story-mode">
+                Enable story mode
+            </label>
+
+            <label class="field-label" for="energy-level">Energy level: <span id="energy-output">5</span></label>
+            <input id="energy-level" name="energyLevel" type="range" min="1" max="10" value="5" data-testid="energy-level">
+
+            <div class="button-row">
+                <button type="submit" class="btn" data-testid="profile-submit">Save Profile</button>
+                <button type="button" class="secondary-btn" id="profile-clear" data-testid="profile-clear">Clear</button>
+            </div>
+        </form>
+        <p class="inline-error" id="profile-error" role="alert" hidden></p>
+        <div class="result-card" id="profile-result" data-testid="profile-result" hidden></div>
+    </section>
+
+    <section class="play-card" data-testid="actions-card">
+        <div class="section-title-row">
+            <h3>Quick Actions</h3>
+            <span class="pill">Counter + Modal</span>
+        </div>
+        <div class="counter-panel">
+            <p class="counter-value" id="counter-value" data-testid="counter-value">0</p>
+            <div class="button-row">
+                <button type="button" class="secondary-btn" id="counter-decrease" data-testid="counter-decrease">-1</button>
+                <button type="button" class="secondary-btn" id="counter-reset" data-testid="counter-reset">Reset</button>
+                <button type="button" class="btn" id="counter-increase" data-testid="counter-increase">+1</button>
+            </div>
+        </div>
+        <div class="stack-sm">
+            <button type="button" class="btn" id="open-modal" data-testid="open-modal">Open Learning Reminder</button>
+            <p class="muted-text">A modal gives you a clean target for open, close, escape, and focus assertions.</p>
+        </div>
+    </section>
+
+    <section class="play-card wide-card" data-testid="tabs-card">
+        <div class="section-title-row">
+            <h3>Learning Stations</h3>
+            <span class="pill">Tabs + Upload + Notes</span>
+        </div>
+        <div class="tab-list" role="tablist" aria-label="Learning stations">
+            <button type="button" class="tab-button is-active" data-tab-target="station-story" data-testid="tab-story" role="tab" aria-selected="true">Story Time</button>
+            <button type="button" class="tab-button" data-tab-target="station-upload" data-testid="tab-upload" role="tab" aria-selected="false">Upload Corner</button>
+            <button type="button" class="tab-button" data-tab-target="station-notes" data-testid="tab-notes" role="tab" aria-selected="false">Notes Board</button>
+        </div>
+
+        <section class="tab-panel is-active" id="station-story" role="tabpanel" data-testid="panel-story">
+            <p>Read a short story prompt, then switch tabs to verify only one panel is visible at a time.</p>
+            <blockquote class="story-card">Mia counted 3 stars, saw a blue kite, and found a triangle window on her walk home.</blockquote>
+        </section>
+
+        <section class="tab-panel" id="station-upload" role="tabpanel" hidden data-testid="panel-upload">
+            <label class="field-label" for="file-upload">Upload a practice file</label>
+            <input id="file-upload" type="file" multiple data-testid="file-upload">
+            <ul class="note-list" id="upload-list" data-testid="upload-list"></ul>
+        </section>
+
+        <section class="tab-panel" id="station-notes" role="tabpanel" hidden data-testid="panel-notes">
+            <div class="note-form-row">
+                <input id="note-input" class="text-input" type="text" maxlength="50" placeholder="Add a reminder" data-testid="note-input">
+                <button type="button" class="btn" id="add-note" data-testid="add-note">Add Note</button>
+            </div>
+            <ul class="note-list" id="note-list" data-testid="note-list"></ul>
+        </section>
+    </section>
+
+    <section class="play-card wide-card" data-testid="matching-card">
+        <div class="section-title-row">
+            <h3>Animal Habitat Match</h3>
+            <span class="pill">Drag + Drop</span>
+        </div>
+        <div class="drag-layout">
+            <div class="drag-bank">
+                <button type="button" class="draggable-chip" draggable="true" data-item="penguin" data-testid="drag-penguin">Penguin</button>
+                <button type="button" class="draggable-chip" draggable="true" data-item="lion" data-testid="drag-lion">Lion</button>
+                <button type="button" class="draggable-chip" draggable="true" data-item="duck" data-testid="drag-duck">Duck</button>
+            </div>
+            <div class="drop-zone-grid">
+                <div class="drop-zone" data-accepts="penguin" data-testid="drop-ice">Icy Coast</div>
+                <div class="drop-zone" data-accepts="lion" data-testid="drop-savanna">Sunny Savanna</div>
+                <div class="drop-zone" data-accepts="duck" data-testid="drop-pond">Pond</div>
+            </div>
+        </div>
+        <div class="button-row">
+            <p class="muted-text" id="match-status" data-testid="match-status">0 of 3 matches complete.</p>
+            <button type="button" class="secondary-btn" id="reset-matches" data-testid="reset-matches">Reset Match Game</button>
+        </div>
+    </section>
+
+    <section class="play-card wide-card" data-testid="fact-card">
+        <div class="section-title-row">
+            <h3>Fact Finder</h3>
+            <span class="pill">Fetch + Assertions</span>
+        </div>
+        <div class="fact-toolbar">
+            <label class="field-label" for="fact-topic">Topic</label>
+            <select id="fact-topic" class="select-input" data-testid="fact-topic">
+                <% topicOptions.forEach((topicOption) => { %>
+                    <option value="<%= topicOption %>"><%= topicOption.charAt(0).toUpperCase() + topicOption.slice(1) %></option>
+                <% }) %>
+            </select>
+            <button type="button" class="btn" id="load-fact" data-testid="load-fact">Load Fact</button>
+            <button type="button" class="secondary-btn" id="next-fact" data-testid="next-fact">Next Fact</button>
+        </div>
+        <div class="result-card" id="fact-result" data-testid="fact-result">Select a topic and load a fact.</div>
+    </section>
+</div>
+
+<div class="modal-shell" id="reminder-modal" hidden data-testid="reminder-modal">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <h3 id="modal-title">Learning Reminder</h3>
+        <p>Small interactive dialogs are ideal for testing visibility, focus flow, and close actions.</p>
+        <div class="button-row">
+            <button type="button" class="secondary-btn" id="close-modal" data-testid="close-modal">Close</button>
+            <button type="button" class="btn" id="accept-modal" data-testid="accept-modal">I am ready</button>
+        </div>
+    </div>
+</div>
