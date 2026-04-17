@@ -31,7 +31,7 @@ This application was created as a simple educational tool for children, featurin
 - **Home Page**: Overview of all learning categories
 - **Alphabet Section**: Learn letters A to Z with example words
 - **Numbers Section**: Learn numbers 1-20 with their word forms
-- **Colors Section**: Explore colours with visual examples
+- **Colors Section**: Explore colors with visual examples
 - **Shapes Section**: Visual representation of common shapes
 - **Animals Section**: Learn animals with images and their sounds
 - **Playwright Playground**: Practice modern UI and API testing flows
