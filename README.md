@@ -1,6 +1,14 @@
 # Kids Learning World
 
 A fun and interactive Node.js web application designed to help children learn basic educational concepts including alphabet, numbers, colors, shapes, and animals.
+
+## Latest Changes
+
+- Added **Playwright Playground** (`/playground`) for end-to-end practice scenarios (forms, modals, tabs, uploads, drag and drop, and API checks).
+- Added **Quiz Challenge** (`/quiz`) with progress tracking, scoring, answer review, and retry flow.
+- Added **Facts API** endpoint (`/api/facts`) used by interactive pages and test automation.
+- Added Playwright automated test coverage for the new playground and quiz experiences.
+
 ## Prompt Used
 
     A complete Node.js web application with Express and EJS templating
@@ -23,8 +31,11 @@ This application was created as a simple educational tool for children, featurin
 - **Home Page**: Overview of all learning categories
 - **Alphabet Section**: Learn letters A to Z with example words
 - **Numbers Section**: Learn numbers 1-20 with their word forms
+- **Colors Section**: Explore colours with visual examples
 - **Shapes Section**: Visual representation of common shapes
 - **Animals Section**: Learn animals with images and their sounds
+- **Playwright Playground**: Practice modern UI and API testing flows
+- **Quiz Challenge**: Answer questions and view score and review summary
 - **Interactive Elements**: Cards respond to clicks with animations and voice
 - **Responsive Design**: Works on desktops, tablets, and mobile devices
 
@@ -40,6 +51,9 @@ This application was created as a simple educational tool for children, featurin
 ```
 ├── app.js              # Main application file with Express setup and routes
 ├── package.json        # Project dependencies and scripts
+├── tests/              # Playwright test suites
+│   ├── playground.spec.ts
+│   └── quiz.spec.ts
 ├── public/             # Static assets
 │   ├── css/            # Stylesheet files
 │   │   └── style.css   # Main CSS file
@@ -53,7 +67,9 @@ This application was created as a simple educational tool for children, featurin
     ├── numbers.ejs     # Numbers learning page
     ├── colors.ejs      # Colors learning page
     ├── shapes.ejs      # Shapes learning page
-    └── animals.ejs     # Animals learning page
+    ├── animals.ejs     # Animals learning page
+    ├── playground.ejs  # Playwright practice page
+    └── quiz.ejs        # Quiz challenge page
 ```
 
 ## Implementation Details
@@ -67,6 +83,9 @@ The application includes the following routes:
 - `/colors` - Learn colors
 - `/shapes` - Learn shapes
 - `/animals` - Learn animals
+- `/playground` - Playwright testing playground
+- `/quiz` - Interactive quiz challenge
+- `/api/facts` - JSON facts endpoint by topic and index
 
 ### Interactivity
 
@@ -95,7 +114,7 @@ The application was developed based on the following prompts:
 
 1. Navigate to the application directory:
    ```
-   cd path/to/nodejsKidsApp
+   cd kids-learning-app
    ```
 
 2. Install all dependencies (first time only):
