@@ -563,6 +563,30 @@ input[type='range']:focus {
     background-image: url('https://images.unsplash.com/photo-1555852095-64e7428df0fa?auto=format&fit=crop&w=300&q=80');
 }
 
+#parrot {
+    background-image: url('https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=300&q=80');
+}
+
+#owl {
+    background-image: url('https://images.unsplash.com/photo-1452570053594-1b985d6ea890?auto=format&fit=crop&w=300&q=80');
+}
+
+#eagle {
+    background-image: url('https://images.unsplash.com/photo-1611689342806-0863700ce1e4?auto=format&fit=crop&w=300&q=80');
+}
+
+#peacock {
+    background-image: url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=300&q=80');
+}
+
+#sparrow {
+    background-image: url('https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=300&q=80');
+}
+
+#flamingo {
+    background-image: url('https://images.unsplash.com/photo-1513135065346-cf5f7f5f2f1e?auto=format&fit=crop&w=300&q=80');
+}
+
 .learning-tips {
     padding: 24px;
 }

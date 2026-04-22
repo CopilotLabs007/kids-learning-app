@@ -30,6 +30,11 @@ const topicFacts = {
     'Penguins cannot fly, but they are strong swimmers.',
     'Giraffes have very long necks to help reach leaves high in trees.'
   ],
+  birds: [
+    'Owls can turn their heads very far to look around.',
+    'Parrots can copy sounds and even short words.',
+    'Flamingos get their pink colour from the food they eat.'
+  ],
   playground: [
     'Playwright can fill forms, click buttons, and validate live updates.',
     'Drag and drop, tabs, uploads, and dialogs are useful end-to-end checks.',
@@ -118,6 +123,10 @@ app.get('/shapes', (req, res) => {
 
 app.get('/animals', (req, res) => {
   renderPage(res, 'animals', 'Learn Animals', 'animals');
+});
+
+app.get('/birds', (req, res) => {
+  renderPage(res, 'birds', 'Learn Birds', 'birds');
 });
 
 app.get('/playground', (req, res) => {

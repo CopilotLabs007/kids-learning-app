@@ -1,6 +1,6 @@
 # Kids Learning World
 
-A fun and interactive Node.js web application designed to help children learn basic educational concepts including alphabet, numbers, colors, shapes, and animals.
+A fun and interactive Node.js web application designed to help children learn basic educational concepts including alphabet, numbers, colors, shapes, animals, and birds.
 ## Prompt Used
 
     A complete Node.js web application with Express and EJS templating
@@ -25,6 +25,7 @@ This application was created as a simple educational tool for children, featurin
 - **Numbers Section**: Learn numbers 1-20 with their word forms
 - **Shapes Section**: Visual representation of common shapes
 - **Animals Section**: Learn animals with images and their sounds
+- **Birds Section**: Learn birds with images and their sounds
 - **Interactive Elements**: Cards respond to clicks with animations and voice
 - **Responsive Design**: Works on desktops, tablets, and mobile devices
 
@@ -53,7 +54,8 @@ This application was created as a simple educational tool for children, featurin
     ├── numbers.ejs     # Numbers learning page
     ├── colors.ejs      # Colors learning page
     ├── shapes.ejs      # Shapes learning page
-    └── animals.ejs     # Animals learning page
+    ├── animals.ejs     # Animals learning page
+    └── birds.ejs       # Birds learning page
 ```
 
 ## Implementation Details
@@ -67,6 +69,7 @@ The application includes the following routes:
 - `/colors` - Learn colors
 - `/shapes` - Learn shapes
 - `/animals` - Learn animals
+- `/birds` - Learn birds
 
 ### Interactivity
 
