@@ -2,7 +2,7 @@
 
 ### Scenario 1: **The Wedding Planning**
 
-**Without Custom Chat Mode:**
+**Without Custom Agent:**
 ```
 Generic Wedding Planner: "Here's a standard wedding package - 200 guests, 
 buffet, DJ..."
@@ -12,7 +12,7 @@ prefers South Indian dishes, has specific muhurat timing, and Grandpa
 needs wheelchair access!
 ```
 
-**With Custom Chat Mode:**
+**With Custom Agent:**
 ```
 Family Elder: "I know our family. We need:
 - Pure vegetarian caterer (our codebase is Python-only)
@@ -27,7 +27,7 @@ All according to our family traditions established over generations!"
 
 ### Scenario 2: **The Joint Family Kitchen**
 
-**Without Custom Chat Mode:**
+**Without Custom Agent:**
 ```
 Each cook makes their own thing:
 - Son makes Italian pasta (random library choice)
@@ -37,7 +37,7 @@ Each cook makes their own thing:
 Result: Confused family, inconsistent meal (codebase chaos)
 ```
 
-**With Custom Chat Mode:**
+**With Custom Agent:**
 ```
 Dadi coordinates: "In our family, we eat Indian food:
 - Everyone use my masala box (shared component library)
@@ -48,6 +48,6 @@ Dadi coordinates: "In our family, we eat Indian food:
 Result: Harmonious meal, happy family (maintainable codebase)
 ```
 
-Conclusion 1 : Custom Chat Mode is like having a family elder who understands the unique needs and traditions of your family, ensuring that every decision is tailored to fit perfectly. It’s the key to unlocking personalized, context-aware interactions that truly resonate with your users!
+Conclusion 1 : Custom Agent is like having a family elder who understands the unique needs and traditions of your family, ensuring that every decision is tailored to fit perfectly. It’s the key to unlocking personalized, context-aware interactions that truly resonate with your users!
 
 Conclusion 2 : Custom agents and chat modes let us guide Copilot’s thinking—reducing noise and emphasizing relevance, while still allowing creative solutions within clear boundaries.
