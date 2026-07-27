@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Rose",
+    "image": "/images/rose.jpg",
+    "description": "A symbol of love and beauty."
+  },
+  {
+    "name": "Tulip",
+    "image": "/images/tulip.jpg",
+    "description": "Known for its vibrant colors and unique shape."
+  },
+  {
+    "name": "Sunflower",
+    "image": "/images/sunflower.jpg",
+    "description": "Bright and cheerful, follows the sun."
+  },
+  {
+    "name": "Daisy",
+    "image": "/images/daisy.jpg",
+    "description": "Simple and elegant, a classic beauty."
+  },
+  {
+    "name": "Orchid",
+    "image": "/images/orchid.jpg",
+    "description": "Exotic and delicate, a tropical treasure."
+  }
+]

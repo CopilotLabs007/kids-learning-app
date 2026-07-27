@@ -1,10 +1,20 @@
-<section class="welcome-section hero-panel">
-    <div>
-        <p class="eyebrow">Play, click, type, drag, and verify</p>
-        <h2>Welcome to Kids Learning World!</h2>
-        <p>A fun and interactive way for children to learn and explore basic concepts.</p>
+<section class="repo-landing hero-panel">
+    <div class="repo-hero-copy">
+        <p class="eyebrow">Copilot Skills • Agents • Playground</p>
+        <h2>Build Kids Learning Apps with Agentic Workflows</h2>
+        <p>
+            This training app combines playful learning pages with labs that demonstrate planning,
+            coding agents, skills, MCP tooling, and browser automation using Playwright.
+        </p>
+        <div class="hero-badges" aria-label="Repository themes">
+            <span class="hero-badge">Learning UI</span>
+            <span class="hero-badge">Agent Mode</span>
+            <span class="hero-badge">Prompt Engineering</span>
+            <span class="hero-badge">Test Automation</span>
+        </div>
     </div>
-    <div class="hero-stats" data-testid="home-progress-panel">
+
+    <aside class="hero-stats" data-testid="home-progress-panel">
         <div class="hero-stat">
             <span class="hero-stat-label">Visited pages</span>
             <strong class="hero-stat-value" id="visited-count" data-testid="visited-count">0</strong>
@@ -13,85 +23,110 @@
             <span class="hero-stat-label">Favorite topics</span>
             <strong class="hero-stat-value" id="favorite-count" data-testid="favorite-count">0</strong>
         </div>
-    </div>
+        <p class="muted-text hero-tip">Progress is saved in your browser so you can continue later.</p>
+    </aside>
+</section>
+
+<section class="landing-strip" aria-label="How to use this repository">
+    <article class="strip-card">
+        <h3>1. Explore Learning Pages</h3>
+        <p>Start with alphabet, numbers, colors, shapes, and animals to see simple kid-friendly interfaces.</p>
+    </article>
+    <article class="strip-card">
+        <h3>2. Open the Playground</h3>
+        <p>Practice forms, tabs, dialogs, uploads, drag and drop, and API interactions in one place.</p>
+    </article>
+    <article class="strip-card">
+        <h3>3. Validate with Quiz</h3>
+        <p>Run through question flows and progress tracking to verify state and UI behavior end-to-end.</p>
+    </article>
 </section>
 
 <section class="toolbar-card" aria-label="Topic search and filters">
-    <label class="field-label" for="topic-search">Find a topic</label>
+    <label class="field-label" for="topic-search">Search lessons and labs</label>
     <input
         id="topic-search"
         class="text-input"
         type="search"
-        placeholder="Search topics like quiz, colors, or playground"
+        placeholder="Try: quiz, testing, alphabet, or playground"
         data-testid="topic-search"
     >
 </section>
 
 <div class="category-cards" id="topic-cards">
-    <div class="card" data-topic-card data-topic-name="alphabet" data-topic-keywords="letters phonics words">
+    <article class="card" data-topic-card data-topic-name="alphabet" data-topic-keywords="letters phonics words reading foundation">
         <h3>Alphabet</h3>
-        <p>Learn letters A to Z with fun examples.</p>
+        <p>Learn letters A to Z with bright examples and beginner-friendly word associations.</p>
         <div class="card-actions">
             <a href="/alphabet" class="btn">Start Learning</a>
             <button type="button" class="favorite-btn" data-favorite-topic="alphabet" data-testid="favorite-alphabet">Save Topic</button>
         </div>
-    </div>
+    </article>
 
-    <div class="card" data-topic-card data-topic-name="numbers" data-topic-keywords="count math one two three">
+    <article class="card" data-topic-card data-topic-name="numbers" data-topic-keywords="count math one two three beginner numeracy">
         <h3>Numbers</h3>
-        <p>Count and learn numbers from 1 to 20.</p>
+        <p>Practice counting and number recognition with simple visual patterns and repetition.</p>
         <div class="card-actions">
             <a href="/numbers" class="btn">Start Learning</a>
             <button type="button" class="favorite-btn" data-favorite-topic="numbers" data-testid="favorite-numbers">Save Topic</button>
         </div>
-    </div>
+    </article>
 
-    <div class="card" data-topic-card data-topic-name="colors" data-topic-keywords="paint rainbow red blue green">
+    <article class="card" data-topic-card data-topic-name="colors" data-topic-keywords="paint rainbow red blue green visual">
         <h3>Colors</h3>
-        <p>Discover the beautiful world of colors.</p>
+        <p>Discover color names and recognition through simple, playful examples for early learners.</p>
         <div class="card-actions">
             <a href="/colors" class="btn">Start Learning</a>
             <button type="button" class="favorite-btn" data-favorite-topic="colors" data-testid="favorite-colors">Save Topic</button>
         </div>
-    </div>
+    </article>
 
-    <div class="card" data-topic-card data-topic-name="shapes" data-topic-keywords="circle square triangle geometry">
+    <article class="card" data-topic-card data-topic-name="shapes" data-topic-keywords="circle square triangle geometry visual memory">
         <h3>Shapes</h3>
-        <p>Learn about different shapes around us.</p>
+        <p>Identify everyday shapes and reinforce geometry basics through easy click interactions.</p>
         <div class="card-actions">
             <a href="/shapes" class="btn">Start Learning</a>
             <button type="button" class="favorite-btn" data-favorite-topic="shapes" data-testid="favorite-shapes">Save Topic</button>
         </div>
-    </div>
+    </article>
 
-    <div class="card" data-topic-card data-topic-name="animals" data-topic-keywords="zoo sounds habitats wild farm">
+    <article class="card" data-topic-card data-topic-name="animals" data-topic-keywords="zoo sounds habitats wild farm interaction">
         <h3>Animals</h3>
-        <p>Meet and learn about different animals.</p>
+        <p>Meet familiar animals with names and sounds to build vocabulary and attention.</p>
         <div class="card-actions">
             <a href="/animals" class="btn">Start Learning</a>
             <button type="button" class="favorite-btn" data-favorite-topic="animals" data-testid="favorite-animals">Save Topic</button>
         </div>
-    </div>
+    </article>
 
-    <div class="card feature-card" data-topic-card data-topic-name="playground" data-topic-keywords="form upload modal tabs drag drop api testing">
+    <article class="card feature-card" data-topic-card data-topic-name="playground" data-topic-keywords="form upload modal tabs drag drop api testing playwright mcp">
         <span class="pill">Testing Lab</span>
         <h3>Playwright Playground</h3>
-        <p>Practice automating forms, dialogs, tabs, uploads, drag and drop, and live API updates.</p>
+        <p>Train browser automation workflows with practical UI widgets and API-backed interactions.</p>
         <div class="card-actions">
             <a href="/playground" class="btn">Open Playground</a>
             <button type="button" class="favorite-btn" data-favorite-topic="playground" data-testid="favorite-playground">Save Topic</button>
         </div>
-    </div>
+    </article>
 
-    <div class="card feature-card" data-topic-card data-topic-name="quiz" data-topic-keywords="questions answers score progress retry">
+    <article class="card feature-card" data-topic-card data-topic-name="quiz" data-topic-keywords="questions answers score progress retry evaluation">
         <span class="pill">Challenge Mode</span>
         <h3>Quiz Challenge</h3>
-        <p>Answer questions, track score, and verify progress and results across the full flow.</p>
+        <p>Validate learner flow with multi-step questions, scoring logic, and progress states.</p>
         <div class="card-actions">
             <a href="/quiz" class="btn">Take Quiz</a>
             <button type="button" class="favorite-btn" data-favorite-topic="quiz" data-testid="favorite-quiz">Save Topic</button>
         </div>
-    </div>
+    </article>
+    <article class="card feature-card" data-topic-card data-topic-name="flowers" data-topic-keywords="flowers json gallery api content">
+        <span class="pill">Data View</span>
+        <h3>Flowers Gallery</h3>
+        <p>Review JSON-driven content rendering and image-rich cards in a simple route flow.</p>
+        <div class="card-actions">
+            <a href="/flowers" class="btn">View Flowers</a>
+            <button type="button" class="favorite-btn" data-favorite-topic="flowers" data-testid="favorite-flowers">Save Topic</button>
+        </div>
+    </article>
 </div>
 
-<p class="empty-state" id="topic-empty-state" hidden>No topics match that search yet.</p>
+<p class="empty-state" id="topic-empty-state" hidden>No lessons or labs match that search yet.</p>

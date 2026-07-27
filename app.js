@@ -164,6 +164,11 @@ app.get('/api/facts', (req, res) => {
   });
 });
 
+// Add Flowers route
+app.get('/flowers', (req, res) => {
+  res.render('flowers', { title: 'Flowers' });
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

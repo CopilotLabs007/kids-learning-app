@@ -1,0 +1,15 @@
+<%- include('layout') %>
+
+<div class="container">
+  <h1>Flowers</h1>
+  <div class="flowers-list">
+    <% const flowers = require('../public/js/flowers.json'); %>
+    <% flowers.forEach(flower => { %>
+      <div class="flower-item">
+        <img src="<%= flower.image %>" alt="<%= flower.name %>">
+        <h2><%= flower.name %></h2>
+        <p><%= flower.description %></p>
+      </div>
+    <% }); %>
+  </div>
+</div>
