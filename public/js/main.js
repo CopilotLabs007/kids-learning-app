@@ -157,7 +157,7 @@ const initializeTopicSearch = () => {
 
 const initializeCardInteractions = () => {
     const cards = document.querySelectorAll(
-        '.letter-card, .number-card, .color-card, .shape-card, .animal-card'
+        '.letter-card, .number-card, .color-card, .shape-card, .animal-card, .bird-card'
     );
 
     cards.forEach((card) => {
@@ -171,6 +171,12 @@ const initializeCardInteractions = () => {
                 const animalName = card.querySelector('.animal-name')?.textContent || '';
                 const animalSound = card.querySelector('.animal-sound')?.textContent || '';
                 speakText(`${animalName} says ${animalSound}`);
+            }
+
+            if (card.classList.contains('bird-card')) {
+                const birdName = card.querySelector('.bird-name')?.textContent || '';
+                const birdSound = card.querySelector('.bird-sound')?.textContent || '';
+                speakText(`${birdName} says ${birdSound}`);
             }
 
             if (card.classList.contains('letter-card')) {
@@ -195,6 +201,15 @@ const initializeCardInteractions = () => {
                 speakText(`This is a ${shapeName}`);
             }
         });
+
+        if (card.classList.contains('bird-card')) {
+            card.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    card.click();
+                }
+            });
+        }
     });
 };
 
