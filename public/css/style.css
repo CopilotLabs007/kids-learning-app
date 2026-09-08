@@ -387,7 +387,8 @@ input[type='range']:focus {
 .numbers-grid,
 .colors-grid,
 .shapes-grid,
-.animals-grid {
+.animals-grid,
+.birds-grid {
     display: grid;
     gap: 22px;
     margin-bottom: 32px;
@@ -411,12 +412,17 @@ input[type='range']:focus {
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
 }
 
+.birds-grid {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+
 .card,
 .letter-card,
 .number-card,
 .color-card,
 .shape-card,
-.animal-card {
+.animal-card,
+.bird-card {
     padding: 22px;
     text-align: center;
     border-radius: 22px;
@@ -432,6 +438,7 @@ input[type='range']:focus {
 .color-card:hover,
 .shape-card:hover,
 .animal-card:hover,
+.bird-card:hover,
 .is-popped {
     transform: translateY(-6px) scale(1.02);
 }
@@ -533,6 +540,7 @@ input[type='range']:focus {
 
 .number,
 .animal-name,
+.bird-name,
 .shape-name,
 .color-name {
     color: var(--secondary);
@@ -616,6 +624,47 @@ input[type='range']:focus {
     background-color: #eef5f8;
     background-size: cover;
     background-position: center;
+}
+
+.bird-image {
+    height: 120px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    background-color: #eef5f8;
+    background-size: cover;
+    background-position: center;
+}
+
+#parrot {
+    background-image: url('https://images.unsplash.com/photo-1452570053594-1b985d6ea890?auto=format&fit=crop&w=300&q=80');
+}
+
+#peacock {
+    background-image: url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=300&q=80');
+}
+
+#eagle {
+    background-image: url('https://images.unsplash.com/photo-1555169062-013468b47731?auto=format&fit=crop&w=300&q=80');
+}
+
+#sparrow {
+    background-image: url('https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=300&q=80');
+}
+
+#owl {
+    background-image: url('https://images.unsplash.com/photo-1570288685369-f7305163d0e3?auto=format&fit=crop&w=300&q=80');
+}
+
+#flamingo {
+    background-image: url('https://images.unsplash.com/photo-1497206365907-f5e630693df0?auto=format&fit=crop&w=300&q=80');
+}
+
+#penguin-bird {
+    background-image: url('https://images.unsplash.com/photo-1551986782-d0169b3f8fa7?auto=format&fit=crop&w=300&q=80');
+}
+
+#hummingbird {
+    background-image: url('https://images.unsplash.com/photo-1522926193341-e9ffd98f7c5d?auto=format&fit=crop&w=300&q=80');
 }
 
 #lion {
