@@ -3,7 +3,7 @@
 This repository contains training materials and demonstrations for GitHub Copilot features and capabilities.
 
 ## Development Guidelines
-- Greet like 'Hello Venkat..' in Marathi language with prefix for every chat response.s
+- Greet like 'Hello Venkat..' in English language with prefix for every chat response.s
 
 ## Project Structure
 
