@@ -435,48 +435,8 @@ main {
     font-style: italic;
 }
 
-/* Vegetables Page Styles */
-.vegetables-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.vegetable-card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.vegetable-card:hover {
-    transform: scale(1.05);
-    background-color: #C7F9CC;
-}
-
-.vegetable-emoji {
-    font-size: 4rem;
-    margin-bottom: 10px;
-}
-
-.vegetable-name {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #4ECDC4;
-    margin-bottom: 5px;
-}
-
-.vegetable-color {
-    font-size: 1rem;
-    color: #666;
-    font-style: italic;
-}
-
-/* Fruits Page Styles */
+/* Vegetables and Fruits Page Styles */
+.vegetables-grid,
 .fruits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -484,6 +444,7 @@ main {
     margin-bottom: 40px;
 }
 
+.vegetable-card,
 .fruit-card {
     background-color: white;
     border-radius: 10px;
@@ -494,23 +455,41 @@ main {
     cursor: pointer;
 }
 
+.vegetable-card:hover,
 .fruit-card:hover {
     transform: scale(1.05);
+}
+
+.vegetable-card:hover {
+    background-color: #C7F9CC;
+}
+
+.fruit-card:hover {
     background-color: #FFE66D;
 }
 
+.vegetable-emoji,
 .fruit-emoji {
     font-size: 4rem;
     margin-bottom: 10px;
 }
 
+.vegetable-name,
 .fruit-name {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #FF6B6B;
     margin-bottom: 5px;
 }
 
+.vegetable-name {
+    color: #4ECDC4;
+}
+
+.fruit-name {
+    color: #FF6B6B;
+}
+
+.vegetable-color,
 .fruit-color {
     font-size: 1rem;
     color: #666;
